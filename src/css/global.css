@@ -1,0 +1,28 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+/*************
+   LAYOUT  
+*************/
+.grid {
+  display: grid;
+}
+
+/***************************
+  TYPOGRAPHY
+****************************/
+html {
+  @apply text-gray-800;
+}
+
+p, li {
+  @apply leading-tight;
+  @apply mb-6;
+}
+
+h3 {
+  @apply text-2xl font-bold mt-16 mb-2;
+}

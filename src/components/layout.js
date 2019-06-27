@@ -1,53 +1,26 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+import Profile from "./profile"
+import Navigation from "./navigation"
+import Footer from "./footer"
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
-    )}
-  />
+import "../css/global.css"
+import styles from "../css/layout.module.css"
+
+const Layout = (props) => (
+  <div>
+    <div className={`h-screen w-1/3 fixed grid border-gray-300 border-r overflow-auto ${styles.sidebar}`}>
+      <Profile />
+      <Navigation />
+      <Footer />
+    </div>
+    <div id="container" className={ `grid ${styles.container}` }>
+      <main id="content" className={ `p-8 ${styles.content}` }>
+        <h1 className="text-6xl leading-none mb-16">{ props.title }</h1>
+        { props.children }
+      </main>
+    </div>
+  </div>
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout
