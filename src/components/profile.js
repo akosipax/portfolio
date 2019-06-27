@@ -21,7 +21,7 @@ export default props => (
       query {
         file(relativePath: { eq: "profile.jpg" }) {
           childImageSharp {
-            fixed(width: 65, height: 65) {
+            fixed(width: 100, height: 100, quality: 100) {
               ...GatsbyImageSharpFixed
             }
           }
