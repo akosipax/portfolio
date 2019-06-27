@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.margret.pw">
-    <img alt="woman technologist" src="https://margret.pw/icons/icon-192x192.png" width="60" />
+    <img alt="woman technologist" src="https://margret.pw/icons/icon-72x72.png" />
   </a>
 </p>
 <h1 align="center">Pax&rsquo;s Online Portfolio</h1>
