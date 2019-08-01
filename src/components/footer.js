@@ -11,7 +11,7 @@ const Footer = ({ data }) => (
     <a href="https://github.com/akosipax" aria-label="Check out my Github activity" target="_blank" rel="noopener noreferrer">
       <img src={github} alt="github logo" className="h-6 inline-block mr-3 my-3" />
     </a>
-    <a href="https://stackoverflow.com/story/pax" aria-label="Check out my story in StackOverflow" target="_blank" and rel="noopener noreferrer">
+    <a href="https://stackoverflow.com/story/pax" aria-label="Check out my story in StackOverflow" target="_blank" rel="noopener noreferrer">
       <img src={so} alt="stackoverflow icon"  className="h-8 inline-block mr-3 my-3" />
     </a>
   </div>
