@@ -20,6 +20,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "ftp-deploy": "^2.3.3",
     "prettier": "^1.18.2",
     "tailwindcss": "^1.0.4"
   },
@@ -29,11 +30,12 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop -H 0.0.0.0 -S",
+    "develop": "gatsby develop -H 0.0.0.0 -S -p 8001",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "node deploy"
   },
   "repository": {
     "type": "git",
