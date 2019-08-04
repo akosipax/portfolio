@@ -1,3 +1,9 @@
 .item {
   @apply mb-2 ml-4 leading-relaxed;
 }
+
+.screenshots {
+  grid-template-columns: auto auto;
+  grid-column-gap: 2rem;
+}
+
