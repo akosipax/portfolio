@@ -1,5 +1,4 @@
 import React from "react"
-import mediumZoom from "medium-zoom"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,6 +7,11 @@ import styles from "../css/projects.module.css";
 
 import chromeExtBeforeGIF from "../images/screenshots/chromeext-before.gif"
 import chromeExtAfterGIF from "../images/screenshots/chromeext-after.gif"
+
+let mediumZoom = Function.prototype;
+if (typeof window !== `undefined`) {
+  mediumZoom = require("medium-zoom").default
+}
 
 mediumZoom('[data-zoomable]');
 
