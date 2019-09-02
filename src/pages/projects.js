@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import "../css/global.css";
 import styles from "../css/projects.module.css";
 
 import chromeExtBeforeGIF from "../images/screenshots/chromeext-before.gif"
@@ -18,22 +19,23 @@ mediumZoom('[data-zoomable]');
 const ProjectsPage = () => (
   <Layout title="My work.">
     <SEO title="Projects" />
-    <h3><a href="https://www.insightforliving.ca"><span role="img" aria-label="link">🔗</span> Insight for Living Canada</a></h3>
-    <p>Website for the organization, Insight for Living Canada&mdash;the Bible-teaching ministry of Charles (Chuck) Swindoll.</p>
-    <ul>
-      <li className={styles.item}><span role="img" aria-label="check">✅</span> Drupal 7</li>
-      <li className={styles.item}><span role="img" aria-label="check">✅</span> Backend Development</li>
-      <li className={styles.item}><p className="leading-tight mb-0"><span role="img" aria-label="check">✅</span> Social Media Metadata <em>for beautiful share previews</em></p></li>
-      <li className={styles.item}><span role="img" aria-label="check">✅</span> ConstantContact and SoundCloud Integration</li>
+    <h3>Pepperplate Snipper</h3>
+    <p>The Pepperplate Snipper takes a screenshot of the recipes in your Pepperplate account and uploads them to your Dropbox account.</p>
+    <p>This project is ongoing and source code can be found in GitHub (<a className="linkRegular" href="https://github.com/paxcodes/peppsnipp">front-end</a>, <a className="linkRegular" href="https://github.com/paxcodes/peppsnipp-api">back-end</a>, <a className="linkRegular" href="https://github.com/paxcodes/peppsnipp-api__deprecated">the crawler<sup>1</sup></a>).</p>
+    <ul className="mb-6">
+      <li className={styles.item}><span role="img" aria-label="check">✅</span> Test-driven: PyTest + Cypress</li>
+      <li className={styles.item}><span role="img" aria-label="check">✅</span> (Python) Flask</li>
+      <li className={styles.item}><span role="img" aria-label="check">✅</span> (Python) Selenium</li>
+      <li className={styles.item}><span role="img" aria-label="check">✅</span> (Javascript/React) Gatsby.js</li>
     </ul>
+    <p className="text-xs"><sup>1</sup> This repository was my backend code before. The code for the Crawler has yet to be moved to the current backend code.</p>
     
-    <h3><a href="https://www.theshiyrpoets.com"><span role="img" aria-label="link">🔗</span> The SHIYR Poets</a></h3>
-    <p>Website for the band, The SHIYR Poets. The SHIYR Poets (pronounced “Sheer”) are Brian Doerksen, Calum Rees, Brian Thiessen and Teresa Trask. They aim to render each psalm in its entirety, singing songs of desperation, desire, justice and praise.</p>
+    <h3><a href="https://babysleep.app"><span role="img" aria-label="link">🔗</span> The Baby Schedule Maker</a></h3>
+    <p>This page provides a sample nap schedule but unlike most—if not all—baby schedule generators, the time and length of naps or awake times can be adjusted.</p>
     <ul>
-      <li className={styles.item}><span role="img" aria-label="check">✅</span> Drupal 7</li>
-      <li className={styles.item}><span role="img" aria-label="check">✅</span> Full-Stack Development</li>
-      <li className={styles.item}><span role="img" aria-label="check">✅</span> Phase 1: Paypal Buttons</li>
-      <li className={styles.item}><span role="img" aria-label="check">✅</span> Phase 2: Drupal Commerce</li>
+      <li className={styles.item}><span role="img" aria-label="check">✅</span> Test-driven: PHPUnit + Cypress</li>
+      <li className={styles.item}><span role="img" aria-label="check">✅</span> (PHP) Laravel</li>
+      <li className={styles.item}><span role="img" aria-label="check">✅</span> (Javascript) Vue.js + Vuex</li>
     </ul>
     
     <h3>SoundCloud Chrome Extension</h3>
@@ -51,6 +53,24 @@ const ProjectsPage = () => (
     <ul className="mt-8">
       <li className={styles.item}><span role="img" aria-label="check">✅</span> Javascript</li>
       <li className={styles.item}><span role="img" aria-label="check">✅</span> Private Chrome Extension</li>
+    </ul>
+    
+    <h3><a href="https://www.insightforliving.ca"><span role="img" aria-label="link">🔗</span> Insight for Living Canada</a></h3>
+    <p>Website for the organization, Insight for Living Canada&mdash;the Bible-teaching ministry of Charles (Chuck) Swindoll.</p>
+    <ul>
+      <li className={styles.item}><span role="img" aria-label="check">✅</span> Drupal 7</li>
+      <li className={styles.item}><span role="img" aria-label="check">✅</span> Backend Development</li>
+      <li className={styles.item}><p className="leading-tight mb-0"><span role="img" aria-label="check">✅</span> Social Media Metadata <em>for beautiful share previews</em></p></li>
+      <li className={styles.item}><span role="img" aria-label="check">✅</span> ConstantContact and SoundCloud Integration</li>
+    </ul>
+    
+    <h3><a href="https://www.theshiyrpoets.com"><span role="img" aria-label="link">🔗</span> The SHIYR Poets</a></h3>
+    <p>Website for the band, The SHIYR Poets. The SHIYR Poets (pronounced “Sheer”) are Brian Doerksen, Calum Rees, Brian Thiessen and Teresa Trask. They aim to render each psalm in its entirety, singing songs of desperation, desire, justice and praise.</p>
+    <ul>
+      <li className={styles.item}><span role="img" aria-label="check">✅</span> Drupal 7</li>
+      <li className={styles.item}><span role="img" aria-label="check">✅</span> Full-Stack Development</li>
+      <li className={styles.item}><span role="img" aria-label="check">✅</span> Phase 1: Paypal Buttons</li>
+      <li className={styles.item}><span role="img" aria-label="check">✅</span> Phase 2: Drupal Commerce</li>
     </ul>
   </Layout>
 )
