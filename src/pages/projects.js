@@ -1,4 +1,5 @@
 import React from "react"
+import ImageZoom from "react-medium-image-zoom"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -11,13 +12,6 @@ import chromeExtAfterGIF from "../images/screenshots/chromeext-after.gif"
 import psTests from "../images/screenshots/ps-testscripts.png"
 import psFrontEnd from "../images/screenshots/ps-frontend.png"
 
-let mediumZoom = Function.prototype;
-if (typeof window !== `undefined`) {
-  mediumZoom = require("medium-zoom").default
-}
-
-mediumZoom('[data-zoomable]');
-
 const ProjectsPage = () => (
   <Layout title="My work.">
     <SEO title="Projects" />
@@ -26,11 +20,17 @@ const ProjectsPage = () => (
     <p>This project is ongoing and source code can be found in GitHub (<a className="linkRegular" href="https://github.com/paxcodes/peppsnipp">front-end</a>, <a className="linkRegular" href="https://github.com/paxcodes/peppsnipp-api">back-end</a>, <a className="linkRegular" href="https://github.com/paxcodes/peppsnipp-api__deprecated">the crawler<sup>1</sup></a>).</p>
     <div className={`${styles.screenshots} screenshots grid` } aria-label="screenshots of the project">
       <figure>
-        <img data-zoomable src={psTests} alt="Tests for Dropbox oAuth2" className="shadow-md w-64 h-48 object-cover object-top" />
+        <ImageZoom 
+          image={{
+            src: psTests,
+            alt: "Tests for Dropbox oAuth2",
+            className: "shadow-md w-64 h-48 object-cover object-top"
+          }}
+        />
         <figcaption className="text-xs py-2 italic">Tests for Dropbox oAuth2</figcaption>
       </figure>
       <figure>
-        <img data-zoomable src={psFrontEnd} alt="The prototype" className="shadow-md w-64 h-48 object-cover object-top" />
+        <img src={psFrontEnd} alt="The prototype" className="shadow-md w-64 h-48 object-cover object-top" />
         <figcaption className="text-xs py-2 italic">The prototype</figcaption>
       </figure>
     </div>
@@ -54,11 +54,23 @@ const ProjectsPage = () => (
     <p>A private chrome extension to check whether broadcasts are properly uploaded to SoundCloud. This turned a tedious 15-minute task into something that can be done in a few minutes.</p>
     <div className={`${styles.screenshots} screenshots grid` } aria-label="animation showing how the extension works">
       <figure>
-        <img data-zoomable src={chromeExtBeforeGIF} alt="results before the broadcasts were uploaded" className="shadow-md w-64" />
+        <ImageZoom 
+          image={{
+            src: chromeExtBeforeGIF,
+            alt: "results before the broadcasts were uploaded",
+            className: "shadow-md w-64"
+          }}
+        />
         <figcaption className="text-xs py-2 italic">before the broadcasts were uploaded to SoundCloud</figcaption>
       </figure>
       <figure>
-        <img data-zoomable src={chromeExtAfterGIF} alt="results after the broadcasts were uploaded" className="shadow-md w-64" />
+        <ImageZoom 
+          image={{
+            src: chromeExtAfterGIF,
+            alt: "results after the broadcasts were uploaded",
+            className: "shadow-md w-64"
+          }}
+        />
         <figcaption className="text-xs py-2 italic">after the broadcasts were uploaded to SoundCloud</figcaption>
       </figure>
     </div>
