@@ -8,6 +8,8 @@ import styles from "../css/projects.module.css";
 
 import chromeExtBeforeGIF from "../images/screenshots/chromeext-before.gif"
 import chromeExtAfterGIF from "../images/screenshots/chromeext-after.gif"
+import psTests from "../images/screenshots/ps-testscripts.png"
+import psFrontEnd from "../images/screenshots/ps-frontend.png"
 
 let mediumZoom = Function.prototype;
 if (typeof window !== `undefined`) {
@@ -22,7 +24,17 @@ const ProjectsPage = () => (
     <h3>Pepperplate Snipper</h3>
     <p>The Pepperplate Snipper takes a screenshot of the recipes in your Pepperplate account and uploads them to your Dropbox account.</p>
     <p>This project is ongoing and source code can be found in GitHub (<a className="linkRegular" href="https://github.com/paxcodes/peppsnipp">front-end</a>, <a className="linkRegular" href="https://github.com/paxcodes/peppsnipp-api">back-end</a>, <a className="linkRegular" href="https://github.com/paxcodes/peppsnipp-api__deprecated">the crawler<sup>1</sup></a>).</p>
-    <ul className="mb-6">
+    <div className={`${styles.screenshots} screenshots grid` } aria-label="screenshots of the project">
+      <figure>
+        <img data-zoomable src={psTests} alt="Tests for Dropbox oAuth2" className="shadow-md w-64 h-48 object-cover object-top" />
+        <figcaption className="text-xs py-2 italic">Tests for Dropbox oAuth2</figcaption>
+      </figure>
+      <figure>
+        <img data-zoomable src={psFrontEnd} alt="The prototype" className="shadow-md w-64 h-48 object-cover object-top" />
+        <figcaption className="text-xs py-2 italic">The prototype</figcaption>
+      </figure>
+    </div>
+    <ul className="my-6">
       <li className={styles.item}><span role="img" aria-label="check">✅</span> Test-driven: PyTest + Cypress</li>
       <li className={styles.item}><span role="img" aria-label="check">✅</span> (Python) Flask</li>
       <li className={styles.item}><span role="img" aria-label="check">✅</span> (Python) Selenium</li>
