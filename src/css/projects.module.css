@@ -3,7 +3,14 @@
 }
 
 .screenshots {
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   grid-column-gap: 2rem;
+}
+
+/* Small (sm) */
+@media (min-width: 640px) {
+  .screenshots {
+    grid-template-columns: auto auto;
+  }
 }
 

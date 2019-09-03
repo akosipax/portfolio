@@ -24,13 +24,13 @@ const ProjectsPage = () => (
           image={{
             src: psTests,
             alt: "Tests for Dropbox oAuth2",
-            className: "shadow-md w-64 h-48 object-cover object-top"
+            className: "shadow-md w-64 h-32 object-cover object-top"
           }}
         />
         <figcaption className="text-xs py-2 italic">Tests for Dropbox oAuth2</figcaption>
       </figure>
       <figure>
-        <img src={psFrontEnd} alt="The prototype" className="shadow-md w-64 h-48 object-cover object-top" />
+        <img src={psFrontEnd} alt="The prototype" className="shadow-md w-64 h-32 object-cover object-top" />
         <figcaption className="text-xs py-2 italic">The prototype</figcaption>
       </figure>
     </div>
