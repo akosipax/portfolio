@@ -84,7 +84,7 @@ const ProjectsPage = () => (
     <ul>
       <li className={styles.item}><span role="img" aria-label="check">✅</span> Drupal 7</li>
       <li className={styles.item}><span role="img" aria-label="check">✅</span> Backend Development</li>
-      <li className={styles.item}><p className="leading-tight mb-0"><span role="img" aria-label="check">✅</span> Social Media Metadata <em>for beautiful share previews</em></p></li>
+      <li className={`${styles.item} leading-tight`}><span role="img" aria-label="check">✅</span> Social Media Metadata <em>for beautiful share previews</em></li>
       <li className={styles.item}><span role="img" aria-label="check">✅</span> ConstantContact and SoundCloud Integration</li>
     </ul>
     
