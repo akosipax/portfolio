@@ -20,7 +20,7 @@ html {
 
 p, li {
   @apply leading-tight;
-  @apply mb-6;
+  @apply my-6;
 }
 
 h3 {
@@ -41,4 +41,25 @@ h3 {
 
 .linkBorder:hover {
   @apply border-0;
+}
+
+/*** BLOG ***/
+.blog-post a {
+  @apply text-teal-700;
+}
+
+.blog-post a:hover {
+  @apply text-teal-900;
+}
+
+.blog-post h2 {
+  @apply text-2xl;
+}
+
+.blog-post code {
+  @apply bg-gray-200 text-sm inline-block p-1;
+}
+
+.blog-post hr {
+  @apply bg-gray-400 h-px;
 }
