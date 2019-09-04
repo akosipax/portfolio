@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 
+import "../css/global.css"
+
 export default function Template({
   data,
 }) {
@@ -12,9 +14,9 @@ export default function Template({
     <Layout>
     <div className="blog-post-container">
       <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.subtitle}</h1>
-        <span>{frontmatter.date}</span>
+        <h1 className="text-3xl leading-none font-semibold">{frontmatter.title}</h1>
+        <h2 className="italic leading-none mt-2 text-gray-700 text-medium">{frontmatter.subtitle}</h2>
+        <span className="text-sm">{frontmatter.date} ・ {frontmatter.length} </span>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
@@ -30,9 +32,11 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM D, YYYY")
+        length
         path
         title
+        subtitle
       }
     }
   }
