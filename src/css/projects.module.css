@@ -1,5 +1,5 @@
 .item {
-  @apply mb-2 ml-4 leading-relaxed;
+  @apply ml-4 my-0 leading-relaxed;
 }
 
 .screenshots {
