@@ -3,6 +3,7 @@ title: "Setting Up Configuration in Flask"
 subtitle: "Part 1 of the Series 'Implementing Dropbox oAuth'"
 path: "/blog/setting-configuration-flask"
 date: "2019-09-17"
+length: "4 min"
 excerpt: "This is the beginning of a series where we implement Dropbox's oAuth2 Flow using Flask. In this article, we'll create our flask application and load our application's configuration."
 ---
 
