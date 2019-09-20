@@ -9,7 +9,7 @@ import styles from "../css/layout.module.css"
 
 const Layout = (props) => (
   <div>
-    <div className={`h-screen w-1/3 fixed grid border-gray-300 border-r overflow-auto ${styles.sidebar}`}>
+    <div className={`h-screen fixed grid border-gray-300 border-r overflow-auto ${styles.sidebar}`}>
       <Profile />
       <Navigation />
       <Footer />

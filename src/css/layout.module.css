@@ -1,12 +1,11 @@
 .sidebar {
    grid-template-rows: auto 3fr auto;
-   min-width: 150px;
-   max-width: 300px;
+   width: 200px;
  }
  
 .container {
   grid-template-areas: "padded content";
-  grid-template-columns: minmax(150px, 300px) minmax(auto, 550px);
+  grid-template-columns: 200px minmax(auto, 550px);
 }
 
 .content {
