@@ -1,8 +1,7 @@
 .sidebar {
    grid-template-rows: auto 3fr auto;
-   width: 200px;
  }
- 
+
 .container {
   grid-template-areas: "padded content";
   grid-template-columns: 200px minmax(auto, 550px);
@@ -11,3 +10,4 @@
 .content {
   grid-area: content;
 }
+

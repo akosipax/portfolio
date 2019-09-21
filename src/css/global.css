@@ -7,8 +7,38 @@
 /*************
    LAYOUT  
 *************/
-.grid {
+body {
+  overflow-x: hidden;
+  width: 100%; 
+}
+
+@responsive {
+  .grid {
+    display: grid;
+  }
+  
+  .w-200 {
+    width: 200px;
+  }
+}
+
+#mainNav:target {
   display: grid;
+  left: 0;
+  outline: none;
+  width: 200px;
+}
+
+#mainNav:target + #container {
+  left: 200px;
+}
+
+#mainNav:target + #container #openMenu {
+   display: none;
+}
+ 
+#mainNav:target + #container #closeMenu {
+   display: block;
 }
 
 /***************************
