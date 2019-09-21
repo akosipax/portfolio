@@ -4,6 +4,13 @@
 
 @tailwind utilities;
 
+pre {
+  min-width: 300px;
+  max-width: 80vw;
+  overflow: scroll;
+  background-color: #edf2f7;
+}
+
 /*************
    LAYOUT  
 *************/
