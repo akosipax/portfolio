@@ -29,7 +29,15 @@ body {
   }
 }
 
-#mainNav:target {
+#container {
+  min-height: 100vh;
+  background: white;
+  width: 100%;
+  left: 0;
+  transition: left 0.3s ease;
+}
+
+#mainNav {
   display: grid;
   left: 0;
   outline: none;
