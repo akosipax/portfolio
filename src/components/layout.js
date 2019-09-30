@@ -10,7 +10,7 @@ import styles from "../css/layout.module.css"
 
 const Layout = (props) => (
   <div>
-    <div id="mainNav" className={`${styles.sidebar} hidden fixed sm:w-200 sm:grid h-screen border-gray-300 border-r overflow-auto bg-gray-100`}>
+    <div id="mainNav" className={`${styles.sidebar} fixed sm:w-200 sm:grid h-screen border-gray-300 border-r overflow-auto bg-gray-100`}>
       <Profile />
       <Navigation />
       <Footer />
