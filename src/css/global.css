@@ -42,7 +42,6 @@ body {
   left: 0;
   outline: none;
   width: 200px;
-  z-index: -999;
 }
 
 #mainNav:target + #container {
