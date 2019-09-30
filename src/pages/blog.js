@@ -10,7 +10,7 @@ const IndexPage = ({data}) => (
   <Layout title="My blog.">
     <SEO title="Blog of Margret `Pax` Williams" />
     {data.allMarkdownRemark.edges.map(({node}) => (
-      <div key={node.id} className="blog-post">
+      <div key={node.id} className="blog-post mb-10">
         <Link
           to={node.frontmatter.path}
           className="text-3xl leading-none font-semibold"
