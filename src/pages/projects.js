@@ -17,7 +17,7 @@ const ProjectsPage = () => (
     <SEO title="Projects" />
     <h3>Pepperplate Snipper</h3>
     <p>The Pepperplate Snipper takes a screenshot of the recipes in your Pepperplate account and uploads them to your Dropbox account.</p>
-    <p>This project is ongoing and source code can be found in GitHub (<a className="linkRegular" href="https://github.com/paxcodes/peppsnipp">front-end</a>, <a className="linkRegular" href="https://github.com/paxcodes/peppsnipp-api">back-end</a>, <a className="linkRegular" href="https://github.com/paxcodes/peppsnipp-api__deprecated">the crawler<sup>1</sup></a>).</p>
+    <p>This project is ongoing and source code can be found in <a className="linkRegular" href="https://github.com/paxcodes/peppsnipp">GitHub</a>.</p>
     <div className={`${styles.screenshots} screenshots grid` } aria-label="screenshots of the project">
       <figure>
         <ImageZoom 
@@ -40,7 +40,6 @@ const ProjectsPage = () => (
       <li className={styles.item}><span role="img" aria-label="check">✅</span> (Python) Selenium</li>
       <li className={styles.item}><span role="img" aria-label="check">✅</span> (Javascript/React) Gatsby.js</li>
     </ul>
-    <p className="text-xs"><sup>1</sup> This repository was my backend code before. The code for the Crawler has yet to be moved to the current backend code.</p>
     
     <h3><a href="https://babysleep.app"><span role="img" aria-label="link">🔗</span> The Baby Schedule Maker</a></h3>
     <p>This page provides a sample nap schedule but unlike most—if not all—baby schedule generators, the time and length of naps or awake times can be adjusted.</p>
