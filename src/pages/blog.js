@@ -4,12 +4,12 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import "../css/global.css";
+import "../css/global.css"
 
-const IndexPage = ({data}) => (
+const IndexPage = ({ data }) => (
   <Layout title="My blog.">
     <SEO title="Blog of Margret `Pax` Williams" />
-    {data.allMarkdownRemark.edges.map(({node}) => (
+    {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id} className="blog-post mb-10">
         <Link
           to={node.frontmatter.path}
@@ -17,12 +17,14 @@ const IndexPage = ({data}) => (
         >
           <h1>{node.frontmatter.title}</h1>
         </Link>
-        <h2 className="italic leading-none mt-2 text-gray-700 text-sm">{node.frontmatter.subtitle}</h2>
-        <span className="text-sm">{node.frontmatter.date} ・ {node.frontmatter.length}</span>
+        <h2 className="italic leading-none mt-2 text-gray-700 text-sm">
+          {node.frontmatter.subtitle}
+        </h2>
+        <span className="text-sm">{node.frontmatter.length}</span>
         <p className="my-4">{node.frontmatter.excerpt}</p>
-        <Link
-          to={node.frontmatter.path}
-          className="linkRegular">Continue reading...</Link>
+        <Link to={node.frontmatter.path} className="linkRegular">
+          Continue reading...
+        </Link>
       </div>
     ))}
   </Layout>
@@ -38,7 +40,6 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "MMMM D, YYYY")
             path
             subtitle
             length

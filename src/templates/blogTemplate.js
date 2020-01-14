@@ -21,9 +21,7 @@ export default function Template({ data }) {
           <h2 className="italic leading-none mt-2 text-gray-700 text-medium">
             {frontmatter.subtitle}
           </h2>
-          <span className="text-sm">
-            {frontmatter.date} ・ {frontmatter.length}{" "}
-          </span>
+          <span className="text-sm">{frontmatter.length} </span>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -39,7 +37,6 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM D, YYYY")
         length
         path
         title
