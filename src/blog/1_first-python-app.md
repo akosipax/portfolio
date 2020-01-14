@@ -49,7 +49,7 @@ My app needs to store access tokens retrieved from Dropbox's oAuth2 flow. It's h
 
 Since access tokens are meant to be _secret_, it is best practice to store them in the server instead of in the client where data can be read.
 
-Apparently, it is known to be a dangerous misunderstanding [among](https://blog.paradoxis.nl/defeating-flasks-session-management-65706ba9d3ce) [Flask](https://www.reddit.com/r/flask/comments/5l2gmf/af_eli5_how_sessions_work_in_flask/) [users](https://www.youtube.com/watch?v=mhcnBTDLxCI).
+It is known to be a dangerous misunderstanding [among](https://blog.paradoxis.nl/defeating-flasks-session-management-65706ba9d3ce) [Flask](https://www.reddit.com/r/flask/comments/5l2gmf/af_eli5_how_sessions_work_in_flask/) [users](https://www.youtube.com/watch?v=mhcnBTDLxCI).
 
 The article by [hackersandslackers](https://hackersandslackers.com/managing-user-session-variables-with-flask-sessions-and-redis/) helped me jumpstart on server-side sessions. I use [Heroku](https://dashboard.heroku.com/apps) for the Redis server.
 
