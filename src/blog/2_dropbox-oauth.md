@@ -125,7 +125,7 @@ def create_app():
 
 Now that we've loaded our Configuration class, when we run `pytest` again, we'll see that our first assertion passed since our Configuration class has the `DROPBOX_SECRET_KEY` property.
 
-However, our 2nd assertion still fails since we haven't specified a value for the DROPBOX_SECRET_KEY. For that, we'll create our .env file.
+However, our 2nd assertion still fails since we haven't specified a value for the `DROPBOX_SECRET_KEY`. For that, we'll create our .env file.
 
 ```
  assert 'DROPBOX_SECRET_KEY' in app.config
@@ -144,7 +144,7 @@ FLASK_ENV=development
 DROPBOX_SECRET_KEY=yourDropboxSecretKey
 ```
 
-To read this .env file, we have to install the package [python-dotenv](https://pypi.org/project/python-dotenv/) and call load_dotenv() in our create_app() function.
+To read this .env file, we have to install the package [python-dotenv](https://pypi.org/project/python-dotenv/) and call `load_dotenv()` in our `create_app()` function.
 
 ```python
 from flask import Flask
