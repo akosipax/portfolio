@@ -1,10 +1,9 @@
 import React from "react"
-import Zoom from "react-medium-image-zoom"
-import "react-medium-image-zoom/dist/styles.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BuiltWith from "../components/builtWith"
+import Screenshots from "../components/screenshots"
 
 import "../css/global.css"
 import styles from "../css/projects.module.css"
@@ -58,43 +57,22 @@ const ProjectsPage = () => (
       The Pepperplate Snipper exports recipes in your Pepperplate account as
       JSON and/or PNG screenshots.
     </p>
-    <div
-      className={`${styles.screenshots} screenshots flex text-center`}
-      aria-label="screenshots of the project"
-    >
-      <figure className="flex-1">
-        <Zoom>
-          <img
-            src={psTests}
-            alt="Tests for the Pepperplate Crawler"
-            className="shadow-md h-32 object-cover object-top"
-          />
-        </Zoom>
-        <figcaption className="text-xs py-2 italic">
-          Tests for the Pepperplate Crawler
-        </figcaption>
-      </figure>
-      <figure className="flex-1">
-        <Zoom>
-          <img
-            src={psFrontEnd1}
-            alt="The GUI"
-            className="shadow-md h-32 object-cover object-top"
-          />
-        </Zoom>
-        <figcaption className="text-xs py-2 italic">The GUI</figcaption>
-      </figure>
-      <figure className="flex-1">
-        <Zoom>
-          <img
-            src={psFrontEnd3}
-            alt="The GUI"
-            className="shadow-md h-32 object-cover object-top"
-          />
-        </Zoom>
-        <figcaption className="text-xs py-2 italic">The GUI</figcaption>
-      </figure>
-    </div>
+    <Screenshots
+      images={[
+        {
+          src: psTests,
+          description: "Tests for the Pepperplate Crawler",
+        },
+        {
+          src: psFrontEnd1,
+          description: "Initial process",
+        },
+        {
+          src: psFrontEnd3,
+          description: "Exporting recipes",
+        },
+      ]}
+    />
 
     <h3>
       <a href="https://babysleep.app">
@@ -136,35 +114,19 @@ const ProjectsPage = () => (
       uploaded to SoundCloud. This turned a tedious 15-minute task into
       something that can be done in a few seconds.
     </p>
-    <div
-      className={`${styles.screenshots} screenshots grid`}
-      aria-label="animation showing how the extension works"
-    >
-      <figure>
-        <Zoom>
-          <img
-            src={chromeExtBeforeGIF}
-            alt="results before the broadcasts were uploaded"
-            className="shadow-md w-64"
-          />
-        </Zoom>
-        <figcaption className="text-xs py-2 italic">
-          before the broadcasts were uploaded to SoundCloud
-        </figcaption>
-      </figure>
-      <figure>
-        <Zoom>
-          <img
-            src={chromeExtAfterGIF}
-            alt="results after the broadcasts were uploaded"
-            className="shadow-md w-64"
-          />
-          <figcaption className="text-xs py-2 italic">
-            after the broadcasts were uploaded to SoundCloud
-          </figcaption>
-        </Zoom>
-      </figure>
-    </div>
+    <Screenshots
+      label="animation showing how the extension works"
+      images={[
+        {
+          src: chromeExtBeforeGIF,
+          description: "before the broadcasts were uploaded",
+        },
+        {
+          src: chromeExtAfterGIF,
+          description: "after the broadcasts were uploaded",
+        },
+      ]}
+    />
     <ul className="mt-8">
       <li className={styles.item}>
         <span role="img" aria-label="check">
