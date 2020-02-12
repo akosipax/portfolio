@@ -6,6 +6,8 @@ import phpunit from "./phpunit.png"
 import cypress from "./cypress.png"
 import laravel from "./laravel.png"
 import vue from "./vue.svg"
+import chrome from "./chrome.png"
+import js from "./js.png"
 
 export default {
   selenium,
@@ -16,4 +18,6 @@ export default {
   laravel,
   vue,
   cypress,
+  chrome,
+  js,
 }

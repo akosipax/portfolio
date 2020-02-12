@@ -115,6 +115,20 @@ const ProjectsPage = () => (
     </p>
 
     <h3>SoundCloud Chrome Extension</h3>
+    <BuiltWith
+      items={[
+        {
+          href: "#",
+          description: "Javascript",
+          src: logos.js,
+        },
+        {
+          href: "https://developer.chrome.com/extensions",
+          description: "Chrome extension",
+          src: logos.chrome,
+        },
+      ]}
+    />
     <p>
       A private chrome extension to check whether broadcasts are properly
       uploaded to SoundCloud. This turned a tedious 15-minute task into
@@ -133,20 +147,6 @@ const ProjectsPage = () => (
         },
       ]}
     />
-    <ul className="mt-8">
-      <li className={styles.item}>
-        <span role="img" aria-label="check">
-          ✅
-        </span>{" "}
-        Javascript
-      </li>
-      <li className={styles.item}>
-        <span role="img" aria-label="check">
-          ✅
-        </span>{" "}
-        Private Chrome Extension
-      </li>
-    </ul>
 
     <h3>
       <a href="https://www.insightforliving.ca">
