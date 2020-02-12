@@ -79,31 +79,40 @@ const ProjectsPage = () => (
         The Baby Schedule Maker
       </a>
     </h3>
+    <BuiltWith
+      items={[
+        {
+          href: "https://phpunit.de/",
+          description: "PHPUnit",
+          src: logos.phpunit,
+        },
+        {
+          href: "http://cypress.io/",
+          description: "Cypress—for E2E testing",
+          src: logos.cypress,
+        },
+        {
+          href: "http://laravel.com/",
+          description: "Laravel—a PHP framework",
+          src: logos.laravel,
+        },
+        {
+          href: "https://vuejs.org/",
+          description: "Vue.js",
+          src: logos.vue,
+          width: 40,
+        },
+        {
+          href: "https://vuex.vuejs.org/",
+          description: "Vuex",
+        },
+      ]}
+    />
     <p>
       This page provides a sample nap schedule but unlike most—if not all—baby
       schedule generators, the time and length of naps or awake times can be
       adjusted.
     </p>
-    <ul>
-      <li className={styles.item}>
-        <span role="img" aria-label="check">
-          ✅
-        </span>{" "}
-        Test-driven: PHPUnit + Cypress
-      </li>
-      <li className={styles.item}>
-        <span role="img" aria-label="check">
-          ✅
-        </span>{" "}
-        (PHP) Laravel
-      </li>
-      <li className={styles.item}>
-        <span role="img" aria-label="check">
-          ✅
-        </span>{" "}
-        (Javascript) Vue.js + Vuex
-      </li>
-    </ul>
 
     <h3>SoundCloud Chrome Extension</h3>
     <p>
