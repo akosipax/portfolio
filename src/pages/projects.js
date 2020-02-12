@@ -4,6 +4,7 @@ import "react-medium-image-zoom/dist/styles.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BuiltWith from "../components/builtWith"
 
 import "../css/global.css"
 import styles from "../css/projects.module.css"
@@ -30,28 +31,30 @@ const ProjectsPage = () => (
         The Pepperplate Snipper
       </a>
     </h3>
-    <ul className="my-6">
-      <li className={styles.itemLogo}>
-        <a href="https://www.python.org/">
-          <img src={python} alt="Python" title="Python" />
-        </a>
-      </li>
-      <li className={styles.itemLogo}>
-        <a href="https://docs.pytest.org/en/latest/">
-          <img src={pytest} alt="PyTest" title="PyTest" />
-        </a>
-      </li>
-      <li className={styles.itemLogo}>
-        <a href="https://selenium-python.readthedocs.io/">
-          <img src={selenium} alt="Selenium" title="Selenium" />
-        </a>
-      </li>
-      <li className={styles.itemLogo}>
-        <a href="https://pypi.org/project/PyQt5/">
-          <img src={qt} alt="PyQt5" title="PyQt5" />
-        </a>
-      </li>
-    </ul>
+    <BuiltWith
+      items={[
+        {
+          href: "https://www.python.org/",
+          description: "Python",
+          src: python,
+        },
+        {
+          href: "https://docs.pytest.org/en/latest/",
+          description: "PyTest",
+          src: pytest,
+        },
+        {
+          href: "https://selenium-python.readthedocs.io/",
+          description: "Selenium",
+          src: selenium,
+        },
+        {
+          href: "https://pypi.org/project/PyQt5/",
+          description: "PyQt5",
+          src: qt,
+        },
+      ]}
+    />
     <p>
       The Pepperplate Snipper exports recipes in your Pepperplate account as
       JSON and/or PNG screenshots.

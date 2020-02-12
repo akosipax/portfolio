@@ -2,14 +2,6 @@
   @apply ml-4 my-0 leading-relaxed;
 }
 
-.itemLogo {
-  @apply ml-4 my-0 leading-relaxed inline w-20;
-}
-
-.itemLogo > a > img {
-  display: inline;
-  max-height: 30px;
-}
 
 .screenshots {
   grid-template-columns: auto;
