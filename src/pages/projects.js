@@ -1,8 +1,10 @@
 import React from "react"
-import ImageZoom from "react-medium-image-zoom"
+import Zoom from "react-medium-image-zoom"
+import "react-medium-image-zoom/dist/styles.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BuiltWith from "../components/builtWith"
 
 import "../css/global.css"
 import styles from "../css/projects.module.css"
@@ -11,7 +13,6 @@ import chromeExtBeforeGIF from "../images/screenshots/chromeext-before.gif"
 import chromeExtAfterGIF from "../images/screenshots/chromeext-after.gif"
 import psTests from "../images/screenshots/peppsnipp/ps-testscripts.png"
 import psFrontEnd1 from "../images/screenshots/peppsnipp/ps-frontend1.png"
-import psFrontEnd2 from "../images/screenshots/peppsnipp/ps-frontend2.png"
 import psFrontEnd3 from "../images/screenshots/peppsnipp/ps-frontend3.png"
 import selenium from "../images/logos/selenium.png"
 import pytest from "../images/logos/pytest.png"
@@ -29,76 +30,68 @@ const ProjectsPage = () => (
         The Pepperplate Snipper
       </a>
     </h3>
-    <ul className="my-6">
-      <li className={styles.itemLogo}>
-        <a href="https://www.python.org/">
-          <img src={python} alt="Python" title="Python" />
-        </a>
-      </li>
-      <li className={styles.itemLogo}>
-        <a href="https://docs.pytest.org/en/latest/">
-          <img src={pytest} alt="PyTest" title="PyTest" />
-        </a>
-      </li>
-      <li className={styles.itemLogo}>
-        <a href="https://selenium-python.readthedocs.io/">
-          <img src={selenium} alt="Selenium" title="Selenium" />
-        </a>
-      </li>
-      <li className={styles.itemLogo}>
-        <a href="https://pypi.org/project/PyQt5/">
-          <img src={qt} alt="PyQt5" title="PyQt5" />
-        </a>
-      </li>
-    </ul>
+    <BuiltWith
+      items={[
+        {
+          href: "https://www.python.org/",
+          description: "Python",
+          src: python,
+        },
+        {
+          href: "https://docs.pytest.org/en/latest/",
+          description: "PyTest",
+          src: pytest,
+        },
+        {
+          href: "https://selenium-python.readthedocs.io/",
+          description: "Selenium",
+          src: selenium,
+        },
+        {
+          href: "https://pypi.org/project/PyQt5/",
+          description: "PyQt5",
+          src: qt,
+        },
+      ]}
+    />
     <p>
       The Pepperplate Snipper exports recipes in your Pepperplate account as
       JSON and/or PNG screenshots.
     </p>
     <div
-      className={`${styles.screenshots} screenshots grid`}
+      className={`${styles.screenshots} screenshots flex text-center`}
       aria-label="screenshots of the project"
     >
-      <figure>
-        <ImageZoom
-          image={{
-            src: psTests,
-            alt: "Tests for the Pepperplate Crawler",
-            className: "shadow-md w-64 h-32 object-cover object-top",
-          }}
-        />
+      <figure className="flex-1">
+        <Zoom>
+          <img
+            src={psTests}
+            alt="Tests for the Pepperplate Crawler"
+            className="shadow-md h-32 object-cover object-top"
+          />
+        </Zoom>
         <figcaption className="text-xs py-2 italic">
-          Tests for Dropbox oAuth2
+          Tests for the Pepperplate Crawler
         </figcaption>
       </figure>
-      <figure>
-        <ImageZoom
-          image={{
-            src: psFrontEnd1,
-            alt: "The GUI",
-            className: "shadow-md w-64 h-32 object-cover object-top",
-          }}
-        />
+      <figure className="flex-1">
+        <Zoom>
+          <img
+            src={psFrontEnd1}
+            alt="The GUI"
+            className="shadow-md h-32 object-cover object-top"
+          />
+        </Zoom>
         <figcaption className="text-xs py-2 italic">The GUI</figcaption>
       </figure>
-      <figure>
-        <ImageZoom
-          image={{
-            src: psFrontEnd2,
-            alt: "The GUI",
-            className: "shadow-md w-64 h-32 object-cover object-top",
-          }}
-        />
-        <figcaption className="text-xs py-2 italic">The GUI</figcaption>
-      </figure>
-      <figure>
-        <ImageZoom
-          image={{
-            src: psFrontEnd3,
-            alt: "The GUI",
-            className: "shadow-md w-64 h-32 object-cover object-top",
-          }}
-        />
+      <figure className="flex-1">
+        <Zoom>
+          <img
+            src={psFrontEnd3}
+            alt="The GUI"
+            className="shadow-md h-32 object-cover object-top"
+          />
+        </Zoom>
         <figcaption className="text-xs py-2 italic">The GUI</figcaption>
       </figure>
     </div>
@@ -148,28 +141,28 @@ const ProjectsPage = () => (
       aria-label="animation showing how the extension works"
     >
       <figure>
-        <ImageZoom
-          image={{
-            src: chromeExtBeforeGIF,
-            alt: "results before the broadcasts were uploaded",
-            className: "shadow-md w-64",
-          }}
-        />
+        <Zoom>
+          <img
+            src={chromeExtBeforeGIF}
+            alt="results before the broadcasts were uploaded"
+            className="shadow-md w-64"
+          />
+        </Zoom>
         <figcaption className="text-xs py-2 italic">
           before the broadcasts were uploaded to SoundCloud
         </figcaption>
       </figure>
       <figure>
-        <ImageZoom
-          image={{
-            src: chromeExtAfterGIF,
-            alt: "results after the broadcasts were uploaded",
-            className: "shadow-md w-64",
-          }}
-        />
-        <figcaption className="text-xs py-2 italic">
-          after the broadcasts were uploaded to SoundCloud
-        </figcaption>
+        <Zoom>
+          <img
+            src={chromeExtAfterGIF}
+            alt="results after the broadcasts were uploaded"
+            className="shadow-md w-64"
+          />
+          <figcaption className="text-xs py-2 italic">
+            after the broadcasts were uploaded to SoundCloud
+          </figcaption>
+        </Zoom>
       </figure>
     </div>
     <ul className="mt-8">
