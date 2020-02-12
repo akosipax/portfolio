@@ -67,11 +67,11 @@ const ProjectsPage = () => (
         },
         {
           src: psFrontEnd1,
-          description: "The GUI",
+          description: "Initial process",
         },
         {
           src: psFrontEnd3,
-          description: "The GUI",
+          description: "Exporting recipes",
         },
       ]}
     />
