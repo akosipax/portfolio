@@ -2,8 +2,8 @@ import React from "react"
 import Zoom from "react-medium-image-zoom"
 import "react-medium-image-zoom/dist/styles.css"
 
-const Screenshots = ({ images }) => (
-  <div className="flex text-center" aria-label="screenshots of the project">
+const Screenshots = ({ label = "Screenshots of the project", images }) => (
+  <div className="flex text-center" aria-label={label}>
     {images.map(screenshot => (
       <figure className="flex-1">
         <Zoom>
