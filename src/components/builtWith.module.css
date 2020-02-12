@@ -5,4 +5,5 @@
 .itemLogo > a > img {
   display: inline;
   max-height: 30px;
+  max-width: 80px;
 }
