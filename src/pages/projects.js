@@ -5,6 +5,7 @@ import "react-medium-image-zoom/dist/styles.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BuiltWith from "../components/builtWith"
+import Screenshots from "../components/screenshots"
 
 import "../css/global.css"
 import styles from "../css/projects.module.css"
@@ -58,43 +59,22 @@ const ProjectsPage = () => (
       The Pepperplate Snipper exports recipes in your Pepperplate account as
       JSON and/or PNG screenshots.
     </p>
-    <div
-      className={`${styles.screenshots} screenshots flex text-center`}
-      aria-label="screenshots of the project"
-    >
-      <figure className="flex-1">
-        <Zoom>
-          <img
-            src={psTests}
-            alt="Tests for the Pepperplate Crawler"
-            className="shadow-md h-32 object-cover object-top"
-          />
-        </Zoom>
-        <figcaption className="text-xs py-2 italic">
-          Tests for the Pepperplate Crawler
-        </figcaption>
-      </figure>
-      <figure className="flex-1">
-        <Zoom>
-          <img
-            src={psFrontEnd1}
-            alt="The GUI"
-            className="shadow-md h-32 object-cover object-top"
-          />
-        </Zoom>
-        <figcaption className="text-xs py-2 italic">The GUI</figcaption>
-      </figure>
-      <figure className="flex-1">
-        <Zoom>
-          <img
-            src={psFrontEnd3}
-            alt="The GUI"
-            className="shadow-md h-32 object-cover object-top"
-          />
-        </Zoom>
-        <figcaption className="text-xs py-2 italic">The GUI</figcaption>
-      </figure>
-    </div>
+    <Screenshots
+      images={[
+        {
+          src: psTests,
+          description: "Tests for the Pepperplate Crawler",
+        },
+        {
+          src: psFrontEnd1,
+          description: "The GUI",
+        },
+        {
+          src: psFrontEnd3,
+          description: "The GUI",
+        },
+      ]}
+    />
 
     <h3>
       <a href="https://babysleep.app">
