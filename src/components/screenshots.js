@@ -13,7 +13,7 @@ const Screenshots = ({ images }) => (
             className="shadow-md h-32 object-cover object-top"
           />
         </Zoom>
-        <figcaption className="text-xs py-2 italic">
+        <figcaption className="text-xs py-2 italic px-2">
           {screenshot.description}
         </figcaption>
       </figure>
