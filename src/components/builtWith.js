@@ -8,11 +8,16 @@ const BuiltWith = ({ items }) => (
       return (
         <li className={styles.itemLogo}>
           <a href={item.href}>
-            <img
-              src={item.src}
-              alt={item.description}
-              title={item.description}
-            />
+            {item.src === undefined ? (
+              <span className="font-bold">{item.description}</span>
+            ) : (
+              <img
+                src={item.src}
+                alt={item.description}
+                title={item.description}
+                width={item.width}
+              />
+            )}
           </a>
         </li>
       )
