@@ -1,5 +1,6 @@
 import React from "react"
-import ImageZoom from "react-medium-image-zoom"
+import Zoom from "react-medium-image-zoom"
+import "react-medium-image-zoom/dist/styles.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -56,49 +57,39 @@ const ProjectsPage = () => (
       JSON and/or PNG screenshots.
     </p>
     <div
-      className={`${styles.screenshots} screenshots grid`}
+      className={`${styles.screenshots} screenshots flex text-center`}
       aria-label="screenshots of the project"
     >
-      <figure>
-        <ImageZoom
-          image={{
-            src: psTests,
-            alt: "Tests for the Pepperplate Crawler",
-            className: "shadow-md w-64 h-32 object-cover object-top",
-          }}
-        />
+      <figure className="flex-1">
+        <Zoom>
+          <img
+            src={psTests}
+            alt="Tests for the Pepperplate Crawler"
+            className="shadow-md h-32 object-cover object-top"
+          />
+        </Zoom>
         <figcaption className="text-xs py-2 italic">
-          Tests for Dropbox oAuth2
+          Tests for the Pepperplate Crawler
         </figcaption>
       </figure>
-      <figure>
-        <ImageZoom
-          image={{
-            src: psFrontEnd1,
-            alt: "The GUI",
-            className: "shadow-md w-64 h-32 object-cover object-top",
-          }}
-        />
+      <figure className="flex-1">
+        <Zoom>
+          <img
+            src={psFrontEnd1}
+            alt="The GUI"
+            className="shadow-md h-32 object-cover object-top"
+          />
+        </Zoom>
         <figcaption className="text-xs py-2 italic">The GUI</figcaption>
       </figure>
-      <figure>
-        <ImageZoom
-          image={{
-            src: psFrontEnd2,
-            alt: "The GUI",
-            className: "shadow-md w-64 h-32 object-cover object-top",
-          }}
-        />
-        <figcaption className="text-xs py-2 italic">The GUI</figcaption>
-      </figure>
-      <figure>
-        <ImageZoom
-          image={{
-            src: psFrontEnd3,
-            alt: "The GUI",
-            className: "shadow-md w-64 h-32 object-cover object-top",
-          }}
-        />
+      <figure className="flex-1">
+        <Zoom>
+          <img
+            src={psFrontEnd3}
+            alt="The GUI"
+            className="shadow-md h-32 object-cover object-top"
+          />
+        </Zoom>
         <figcaption className="text-xs py-2 italic">The GUI</figcaption>
       </figure>
     </div>
@@ -148,28 +139,28 @@ const ProjectsPage = () => (
       aria-label="animation showing how the extension works"
     >
       <figure>
-        <ImageZoom
-          image={{
-            src: chromeExtBeforeGIF,
-            alt: "results before the broadcasts were uploaded",
-            className: "shadow-md w-64",
-          }}
-        />
+        <Zoom>
+          <img
+            src={chromeExtBeforeGIF}
+            alt="results before the broadcasts were uploaded"
+            className="shadow-md w-64"
+          />
+        </Zoom>
         <figcaption className="text-xs py-2 italic">
           before the broadcasts were uploaded to SoundCloud
         </figcaption>
       </figure>
       <figure>
-        <ImageZoom
-          image={{
-            src: chromeExtAfterGIF,
-            alt: "results after the broadcasts were uploaded",
-            className: "shadow-md w-64",
-          }}
-        />
-        <figcaption className="text-xs py-2 italic">
-          after the broadcasts were uploaded to SoundCloud
-        </figcaption>
+        <Zoom>
+          <img
+            src={chromeExtAfterGIF}
+            alt="results after the broadcasts were uploaded"
+            className="shadow-md w-64"
+          />
+          <figcaption className="text-xs py-2 italic">
+            after the broadcasts were uploaded to SoundCloud
+          </figcaption>
+        </Zoom>
       </figure>
     </div>
     <ul className="mt-8">
