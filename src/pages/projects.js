@@ -1,6 +1,4 @@
 import React from "react"
-import Zoom from "react-medium-image-zoom"
-import "react-medium-image-zoom/dist/styles.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -116,35 +114,19 @@ const ProjectsPage = () => (
       uploaded to SoundCloud. This turned a tedious 15-minute task into
       something that can be done in a few seconds.
     </p>
-    <div
-      className={`${styles.screenshots} screenshots grid`}
-      aria-label="animation showing how the extension works"
-    >
-      <figure>
-        <Zoom>
-          <img
-            src={chromeExtBeforeGIF}
-            alt="results before the broadcasts were uploaded"
-            className="shadow-md w-64"
-          />
-        </Zoom>
-        <figcaption className="text-xs py-2 italic">
-          before the broadcasts were uploaded to SoundCloud
-        </figcaption>
-      </figure>
-      <figure>
-        <Zoom>
-          <img
-            src={chromeExtAfterGIF}
-            alt="results after the broadcasts were uploaded"
-            className="shadow-md w-64"
-          />
-          <figcaption className="text-xs py-2 italic">
-            after the broadcasts were uploaded to SoundCloud
-          </figcaption>
-        </Zoom>
-      </figure>
-    </div>
+    <Screenshots
+      label="animation showing how the extension works"
+      images={[
+        {
+          src: chromeExtBeforeGIF,
+          description: "before the broadcasts were uploaded",
+        },
+        {
+          src: chromeExtAfterGIF,
+          description: "after the broadcasts were uploaded",
+        },
+      ]}
+    />
     <ul className="mt-8">
       <li className={styles.item}>
         <span role="img" aria-label="check">
