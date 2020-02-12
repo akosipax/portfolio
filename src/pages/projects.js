@@ -13,10 +13,7 @@ import chromeExtAfterGIF from "../images/screenshots/chromeext-after.gif"
 import psTests from "../images/screenshots/peppsnipp/ps-testscripts.png"
 import psFrontEnd1 from "../images/screenshots/peppsnipp/ps-frontend1.png"
 import psFrontEnd3 from "../images/screenshots/peppsnipp/ps-frontend3.png"
-import selenium from "../images/logos/selenium.png"
-import pytest from "../images/logos/pytest.png"
-import python from "../images/logos/python.svg"
-import qt from "../images/logos/qt.svg"
+import logos from "../images/logos/logos"
 
 const ProjectsPage = () => (
   <Layout title="My work.">
@@ -34,22 +31,22 @@ const ProjectsPage = () => (
         {
           href: "https://www.python.org/",
           description: "Python",
-          src: python,
+          src: logos.python,
         },
         {
           href: "https://docs.pytest.org/en/latest/",
           description: "PyTest",
-          src: pytest,
+          src: logos.pytest,
         },
         {
           href: "https://selenium-python.readthedocs.io/",
           description: "Selenium",
-          src: selenium,
+          src: logos.selenium,
         },
         {
           href: "https://pypi.org/project/PyQt5/",
           description: "PyQt5",
-          src: qt,
+          src: logos.qt,
         },
       ]}
     />
