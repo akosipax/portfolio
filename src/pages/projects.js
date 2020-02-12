@@ -9,23 +9,51 @@ import styles from "../css/projects.module.css"
 
 import chromeExtBeforeGIF from "../images/screenshots/chromeext-before.gif"
 import chromeExtAfterGIF from "../images/screenshots/chromeext-after.gif"
-import psTests from "../images/screenshots/ps-testscripts.png"
-import psFrontEnd from "../images/screenshots/ps-frontend.png"
+import psTests from "../images/screenshots/peppsnipp/ps-testscripts.png"
+import psFrontEnd1 from "../images/screenshots/peppsnipp/ps-frontend1.png"
+import psFrontEnd2 from "../images/screenshots/peppsnipp/ps-frontend2.png"
+import psFrontEnd3 from "../images/screenshots/peppsnipp/ps-frontend3.png"
+import selenium from "../images/logos/selenium.png"
+import pytest from "../images/logos/pytest.png"
+import python from "../images/logos/python.svg"
+import qt from "../images/logos/qt.svg"
 
 const ProjectsPage = () => (
   <Layout title="My work.">
     <SEO title="Projects" />
-    <h3>Pepperplate Snipper</h3>
-    <p>
-      The Pepperplate Snipper takes a screenshot of the recipes in your
-      Pepperplate account and uploads them to your Dropbox account.
-    </p>
-    <p>
-      This project is ongoing and source code can be found in{" "}
-      <a className="linkRegular" href="https://github.com/paxcodes/peppsnipp">
-        GitHub
+    <h3>
+      <a href="https://github.com/paxcodes/peppsnipp">
+        <span role="img" aria-label="link">
+          🔗
+        </span>{" "}
+        The Pepperplate Snipper
       </a>
-      .
+    </h3>
+    <ul className="my-6">
+      <li className={styles.itemLogo}>
+        <a href="https://www.python.org/">
+          <img src={python} alt="Python" title="Python" />
+        </a>
+      </li>
+      <li className={styles.itemLogo}>
+        <a href="https://docs.pytest.org/en/latest/">
+          <img src={pytest} alt="PyTest" title="PyTest" />
+        </a>
+      </li>
+      <li className={styles.itemLogo}>
+        <a href="https://selenium-python.readthedocs.io/">
+          <img src={selenium} alt="Selenium" title="Selenium" />
+        </a>
+      </li>
+      <li className={styles.itemLogo}>
+        <a href="https://pypi.org/project/PyQt5/">
+          <img src={qt} alt="PyQt5" title="PyQt5" />
+        </a>
+      </li>
+    </ul>
+    <p>
+      The Pepperplate Snipper exports recipes in your Pepperplate account as
+      JSON and/or PNG screenshots.
     </p>
     <div
       className={`${styles.screenshots} screenshots grid`}
@@ -35,7 +63,7 @@ const ProjectsPage = () => (
         <ImageZoom
           image={{
             src: psTests,
-            alt: "Tests for Dropbox oAuth2",
+            alt: "Tests for the Pepperplate Crawler",
             className: "shadow-md w-64 h-32 object-cover object-top",
           }}
         />
@@ -44,40 +72,36 @@ const ProjectsPage = () => (
         </figcaption>
       </figure>
       <figure>
-        <img
-          src={psFrontEnd}
-          alt="The prototype"
-          className="shadow-md w-64 h-32 object-cover object-top"
+        <ImageZoom
+          image={{
+            src: psFrontEnd1,
+            alt: "The GUI",
+            className: "shadow-md w-64 h-32 object-cover object-top",
+          }}
         />
-        <figcaption className="text-xs py-2 italic">The prototype</figcaption>
+        <figcaption className="text-xs py-2 italic">The GUI</figcaption>
+      </figure>
+      <figure>
+        <ImageZoom
+          image={{
+            src: psFrontEnd2,
+            alt: "The GUI",
+            className: "shadow-md w-64 h-32 object-cover object-top",
+          }}
+        />
+        <figcaption className="text-xs py-2 italic">The GUI</figcaption>
+      </figure>
+      <figure>
+        <ImageZoom
+          image={{
+            src: psFrontEnd3,
+            alt: "The GUI",
+            className: "shadow-md w-64 h-32 object-cover object-top",
+          }}
+        />
+        <figcaption className="text-xs py-2 italic">The GUI</figcaption>
       </figure>
     </div>
-    <ul className="my-6">
-      <li className={styles.item}>
-        <span role="img" aria-label="check">
-          ✅
-        </span>{" "}
-        Test-driven: PyTest + Cypress
-      </li>
-      <li className={styles.item}>
-        <span role="img" aria-label="check">
-          ✅
-        </span>{" "}
-        (Python) Flask
-      </li>
-      <li className={styles.item}>
-        <span role="img" aria-label="check">
-          ✅
-        </span>{" "}
-        (Python) Selenium
-      </li>
-      <li className={styles.item}>
-        <span role="img" aria-label="check">
-          ✅
-        </span>{" "}
-        (Javascript/React) Gatsby.js
-      </li>
-    </ul>
 
     <h3>
       <a href="https://babysleep.app">
