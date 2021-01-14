@@ -1,18 +1,15 @@
 import { graphql } from "gatsby"
 import React from "react"
-import Layout from "../components/layout"
+import LayoutBlog from "../components/layoutBlog"
 import SEO from "../components/seo"
 import "../css/global.css"
-
 
 
 export default function Template({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-  const ghPath = "https://github.com/paxcodes/portfolio/edit/master/src"
-  const ghLink = ghPath + frontmatter.path + ".md"
   return (
-    <Layout>
+    <LayoutBlog path={frontmatter.path}>
       <SEO title={frontmatter.title} />
 
       <div className="blog-post-container">
@@ -32,9 +29,7 @@ export default function Template({ data }) {
       </div>
 
       <hr />
-
-      <p>See an error (typographical, technical)? Submit an <a href={ghLink} class="linkRegular linkBorder" >edit.</a></p>
-    </Layout >
+    </LayoutBlog>
   )
 }
 
