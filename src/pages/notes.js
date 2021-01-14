@@ -8,7 +8,7 @@ import "../css/global.css"
 
 const IndexPage = ({ data }) => (
   <Layout title="My notebook.">
-    <SEO title="Less-formal 'Blog' of Margret `Pax` Williams" />
+    <SEO title="Notebook (Poor Man's Blog)" />
     <p>Some people have blogs. But I don't have time for such formality. When I try to figure out something, I document the process in a virtual notebook. Here are some of the pages.</p>
     <hr className="my-16" />
     {data.allMarkdownRemark.edges.map(({ node }) => (
