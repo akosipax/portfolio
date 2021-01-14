@@ -9,6 +9,8 @@ import "../css/global.css"
 export default function Template({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+  const ghPath = "https://github.com/paxcodes/portfolio/edit/master/src"
+  const ghLink = ghPath + frontmatter.path + ".md"
   return (
     <Layout>
       <SEO title={frontmatter.title} />
@@ -28,7 +30,11 @@ export default function Template({ data }) {
           />
         </div>
       </div>
-    </Layout>
+
+      <hr />
+
+      <p>See an error (typographical, technical)? Submit an <a href={ghLink} class="linkRegular linkBorder" >edit.</a></p>
+    </Layout >
   )
 }
 
