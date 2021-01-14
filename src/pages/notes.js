@@ -1,14 +1,16 @@
+import { graphql, Link } from "gatsby"
 import React from "react"
-import { Link, graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
 import "../css/global.css"
 
+
+
 const IndexPage = ({ data }) => (
-  <Layout title="My blog.">
-    <SEO title="Blog of Margret `Pax` Williams" />
+  <Layout title="My notebook.">
+    <SEO title="Less-formal 'Blog' of Margret `Pax` Williams" />
+    <p>Some people have blogs. But I don't have time for such formality. When I try to figure out something, I document the process in a virtual notebook. Here are some of the pages.</p>
+    <hr className="my-16" />
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id} className="blog-post mb-10">
         <Link
