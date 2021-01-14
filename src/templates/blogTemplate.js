@@ -1,10 +1,10 @@
-import React from "react"
 import { graphql } from "gatsby"
-import SEO from "../components/seo"
-
+import React from "react"
 import Layout from "../components/layout"
-
+import SEO from "../components/seo"
 import "../css/global.css"
+
+
 
 export default function Template({ data }) {
   const { markdownRemark } = data
@@ -18,9 +18,9 @@ export default function Template({ data }) {
           <h1 className="text-3xl leading-none font-semibold">
             {frontmatter.title}
           </h1>
-          <h2 className="italic leading-none mt-2 text-gray-700 text-medium">
+          <p className="italic leading-none mt-2 mb-0 text-gray-700 text-medium">
             {frontmatter.subtitle}
-          </h2>
+          </p>
           <span className="text-sm">{frontmatter.length} </span>
           <div
             className="blog-post-content"
