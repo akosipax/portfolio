@@ -67,7 +67,3 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
-
-### Miscellaneous
-## Notes (it is in a separate repo)
-src/notes
