@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Margret “Pax” Williams`,
     description: `Pax’s online portfolio.`,
-    author: `@akosipax`,
+    author: `@paxcodes`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -18,7 +18,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `md-pages`,
-        path: `${__dirname}/src/blog`,
+        path: `${__dirname}/src/notes`,
       },
     },
     `gatsby-transformer-remark`,
