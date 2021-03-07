@@ -18,10 +18,7 @@ const ProjectsPage = () => (
   <Layout title="My work.">
     <SEO title="Projects" />
     <h3>
-      <a href="https://github.com/paxcodes/peppsnipp">
-        <span role="img" aria-label="link">
-          🔗
-        </span>{" "}
+      <a href="https://github.com/paxcodes/peppsnipp/releases">
         The Pepperplate Snipper
       </a>
     </h3>
@@ -51,7 +48,10 @@ const ProjectsPage = () => (
     />
     <p>
       The Pepperplate Snipper exports recipes in someone's Pepperplate account as
-      JSON and/or PNG screenshots through web-scraping.
+      JSON and/or PNG screenshots through web-scraping &middot;&nbsp;
+      <a href="https://github.com/paxcodes/peppsnipp" class="linkRegular">
+        GitHub
+      </a>
     </p>
     <Screenshots
       images={[
@@ -72,9 +72,6 @@ const ProjectsPage = () => (
 
     <h3>
       <a href="https://babysleep.app">
-        <span role="img" aria-label="link">
-          🔗
-        </span>{" "}
         The Baby Schedule Maker
       </a>
     </h3>
@@ -106,7 +103,10 @@ const ProjectsPage = () => (
     <p>
       This page provides a sample nap schedule but unlike most—if not all—baby
       schedule generators, the time and length of naps or awake times can be
-      adjusted.
+      adjusted &middot;&nbsp;
+      <a href="https://github.com/paxcodes/babynaps" class="linkRegular">
+        GitHub
+      </a>
     </p>
 
     <h3>SoundCloud Chrome Extension</h3>
