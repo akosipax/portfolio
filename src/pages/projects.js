@@ -10,6 +10,7 @@ import chromeExtBeforeGIF from "../images/screenshots/chromeext-before.gif"
 import psFrontEnd1 from "../images/screenshots/peppsnipp/ps-frontend1.png"
 import psFrontEnd3 from "../images/screenshots/peppsnipp/ps-frontend3.png"
 import psTests from "../images/screenshots/peppsnipp/ps-testscripts.png"
+import screenshot_images from "../images/screenshots/screenshots"
 
 
 
@@ -47,17 +48,21 @@ const ProjectsPage = () => (
     <Screenshots
       images={[
         {
-          src: psTests,
-          description: "Tests for the Pepperplate Crawler",
+          src: screenshot_images.reg_cli,
+          description: "CLI app",
+        },
+      ]}
+    />
+    <Screenshots
+      images={[
+        {
+          src: screenshot_images.reg_test_a,
+          description: "Tests without real HTTP calls",
         },
         {
-          src: psFrontEnd1,
-          description: "Initial process",
-        },
-        {
-          src: psFrontEnd3,
-          description: "Exporting recipes",
-        },
+          src: screenshot_images.reg_test_b,
+          description: "More tests",
+        }
       ]}
     />
     <h3>
@@ -87,17 +92,13 @@ const ProjectsPage = () => (
     <Screenshots
       images={[
         {
-          src: psTests,
-          description: "Tests for the Pepperplate Crawler",
+          src: screenshot_images.wr_tests,
+          description: "Tests",
         },
         {
-          src: psFrontEnd1,
-          description: "Initial process",
-        },
-        {
-          src: psFrontEnd3,
-          description: "Exporting recipes",
-        },
+          src: screenshot_images.wr_web,
+          description: "Web app",
+        }
       ]}
     />
     <h3>Store Switchover</h3>
@@ -130,17 +131,9 @@ const ProjectsPage = () => (
     <Screenshots
       images={[
         {
-          src: psTests,
-          description: "Tests for the Pepperplate Crawler",
-        },
-        {
-          src: psFrontEnd1,
-          description: "Initial process",
-        },
-        {
-          src: psFrontEnd3,
-          description: "Exporting recipes",
-        },
+          src: screenshot_images.ss_help,
+          description: "cli",
+        }
       ]}
     />
     <h3>
