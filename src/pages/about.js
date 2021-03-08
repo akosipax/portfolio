@@ -14,7 +14,7 @@ const AboutPage = () => (
     <p>When I'm not coding, I</p>
     <ul className="list-disc list-inside">
       <li className="my-0">
-        I spend time with my husband by watching a show or movie in Netflix or playing{" "}
+        spend time with my husband by watching a show or movie in Netflix or playing{" "}
         <a href="https://store.steampowered.com/app/794260/Outward/" class="linkRegular linkBorder">
           Outward
         </a> together
