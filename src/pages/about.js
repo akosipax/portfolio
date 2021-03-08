@@ -8,9 +8,17 @@ import "../css/global.css";
 const AboutPage = () => (
   <Layout title="About me.">
     <SEO title="About" />
+    <p>I love automation because it empowers people to have more time to think deeply and
+    creatively about big problems. I love Python and spoiled by its clean syntax.
+    I have a B.Sc. Computer Science degree in De La Salle University&ndash;Manila
+    specializing in Software Technology where I experienced building a social media
+    website prototype, implementing our own programming language, and developing a
+      Q&A system using natural language processing.</p>
+    <p>
+      I'm a Christian, a wife, and a mom living in the Fraser Valley, Canada. I grew
+      up in the Philippines and moved to Canada after I graduated in the university.
+    </p>
 
-    <p>I'm a Christian, a wife, and a mom living in the Fraser Valley, Canada. I grew up in the Philippines and moved to Canada after I graduated in the university.</p>
-    <p>I have a B.Sc. Computer Science degree in De La Salle University&ndash;Manila specializing in Software Technology where I experienced building a social media website prototype, implementing our own programming language, and developing a Q&A system using natural language processing.</p>
     <p>When I'm not coding, I</p>
     <ul className="list-disc list-inside">
       <li className="my-0">
