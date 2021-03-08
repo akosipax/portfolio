@@ -18,6 +18,57 @@ const ProjectsPage = () => (
   <Layout title="My work.">
     <SEO title="Projects" />
     <h3>
+      Weekly Email Roundup Generator
+    </h3>
+    <p>Automatically create and schedule newsletters in Mailchimp using their API; Newsletters contain new articles, videos, and broadcasts published by the organization (collected by parsing RSS feeds); and top posts in the Facebook page  (calculated using Facebook’s API).</p>
+    <BuiltWith
+      items={[
+        {
+          href: "https://www.python.org/",
+          description: "Python",
+          src: logos.python,
+        },
+        {
+          href: "https://docs.pytest.org/en/latest/",
+          description: "PyTest",
+          src: logos.pytest,
+        },
+        {
+          href: "https://selenium-python.readthedocs.io/",
+          description: "Selenium",
+          src: logos.selenium,
+        },
+        {
+          href: "https://pypi.org/project/PyQt5/",
+          description: "PyQt5",
+          src: logos.qt,
+        },
+      ]}
+    />
+    <p>
+      The Pepperplate Snipper exports recipes in someone's Pepperplate account as
+      JSON and/or PNG screenshots through web-scraping &middot;&nbsp;
+      <a href="https://github.com/paxcodes/peppsnipp" class="linkRegular">
+        GitHub
+      </a>
+    </p>
+    <Screenshots
+      images={[
+        {
+          src: psTests,
+          description: "Tests for the Pepperplate Crawler",
+        },
+        {
+          src: psFrontEnd1,
+          description: "Initial process",
+        },
+        {
+          src: psFrontEnd3,
+          description: "Exporting recipes",
+        },
+      ]}
+    />
+    <h3>
       <a href="https://github.com/paxcodes/peppsnipp/releases">
         The Pepperplate Snipper
       </a>
